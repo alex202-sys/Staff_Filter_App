@@ -23,5 +23,54 @@
     <h2 style="color:red">Antworten:</h2>
 
     <!-- Hier eure Antworten rendern -->
+    {% block title %} {% endblock %}
+
+
+    {% block content %}
+          <h3>    <h3>1. Employee list</h3> 
+        {% for employee in employee_list %}
+            <ol>
+
+                {{ employee.name }} - {{ employee.department }} - {{ employee.salary }} €  - {{ employee.hire_date }} 
+            
+            </ol>
+        {% endfor %}
+
+        <h3>2. der Namen aller Mitarbeiter, die mehr als 3000 € im Monat verdienen</h3>
+
+        {% for employee in employees3000 %}
+            <ol>
+
+                {{ employee.name }} - {{ employee.department }} - {{ employee.salary }} €
+            
+            </ol>
+        {% endfor %}
+
+        <h3>3. Anzahl der Mitarbeiter, die 5000 € im Monat oder mehr verdienen</h3>
+         <ol>
+
+            Anzahl: {{ employeesCount5000 }}
+            
+        </ol>
+
+        <h3>4. Wie hoch ist das Durchschnittsgehalt aller Mitarbeiter im Sales-Team? Zeige das Ergebnis auf zwei Nachkommastellen gerundet an. </h3>
+
+        <ol>
+
+            Durchschnittsgehalt: {{ durchgehalt }}
+            
+        </ol>
+
+        <h3>5. Welche Mitarbeiter wurden vor dem 1. Januar 2022 eingestellt und gehören NICHT zur Abteilung HR?</h3>
+        {% for employee in employeesBefore2022NotHR %}
+            <ol>
+
+                {{ employee.name }} - {{ employee.department }} - {{ employee.hire_date }} 
+            
+            </ol>
+        {% endfor %}
+
+    {% endblock %}
+
   </body>
 </html>

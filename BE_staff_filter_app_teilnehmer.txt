@@ -1,0 +1,14 @@
+https://hackmd.io/@mtUtNKDMTzWHLKW5U9RnOw/HkKF0C6Rlx Django-Projekt von bestehendem Repository einrichten
+Klone das Repository https://github.com/Developer-Akademie-AA/BE_staff_filter_app_teilnehmer
+C:\Users\aleks\Desktop\BE_staff_filter_app_teilnehmer
+python -m venv .venv
+.venv/Scripts/activate
+pip install -r requirements.txt
+    ODER    python -m pip install Django 
+            pip freeze > requirements.txt
+python manage.py migrate
+python manage.py shell < populate.py
+python manage.py runserver
+http://127.0.0.1:8000/employees/
+
+
