@@ -10,5 +10,11 @@ python manage.py migrate
 python manage.py shell < populate.py
 python manage.py runserver
 http://127.0.0.1:8000/employees/
+view,py und employee_list.html entspricht Aufgabe korrigiert
+Github https://github.com/alex202-sys/Staff_Filter_App.git
+
+git remote set-url origin https://github.com/alex202-sys/Staff_Filter_App.git
+git branch -M main
+git push -u origin main
 
 
